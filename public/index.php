@@ -9,17 +9,12 @@
 
 
     if(isset($profile)){
-        $profile_array = array();
-        $profile_array['data'] = array();
-
-        $post_item = array(
+        $profile_array = array(
             'slackUsername' => $profile->slackUsername,
             'backend' => $profile->backend,
             'age' => $profile->age,
             'bio' =>$profile->bio 
         );
-
-        array_push($profile_array['data'], $post_item);
 
         echo json_encode($profile_array);
 
